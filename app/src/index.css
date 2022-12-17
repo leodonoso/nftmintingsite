@@ -1,0 +1,71 @@
+@import './reset.css';
+:root {
+    font-family: 'Roboto-Bold', sans-serif;
+}
+
+html, body {
+    color: #FFFFFF;
+    object-fit: cover;
+    background-image: url('../public/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mint {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img-container {
+    width: 25rem; height: 25rem;
+    overflow: hidden;
+    border-radius: 1%;
+    margin: 1.5rem;
+    box-shadow: 0 0 10px 4px #303030;
+}
+
+.mintBtn {
+    padding: .8rem 3.5rem;
+    color: black;
+    background-color: #3CBA8B;
+    border: none;
+    border-radius: 5%;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.mintBtn:hover {
+    padding: .8rem 3.5rem;
+    color: #a8a8a8;
+    background-color: #1e5f47;
+    border: none;
+    border-radius: 5%;
+}
+
+.card {
+    width: 32rem; height: 47rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #804980;
+    border-radius: 1%;
+    box-shadow: 0 0 20px 8px #303030;
+}

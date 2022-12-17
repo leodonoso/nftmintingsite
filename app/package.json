@@ -1,0 +1,50 @@
+{
+    "name": "@solana/wallet-adapter-react-ui-starter",
+    "version": "0.9.16",
+    "author": "Solana Maintainers <maintainers@solana.foundation>",
+    "repository": "https://github.com/solana-labs/wallet-adapter",
+    "license": "Apache-2.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "src",
+        ".editorconfig",
+        ".env",
+        ".gitignore",
+        ".prettierignore",
+        ".prettierrc",
+        "LICENSE",
+        "package.json",
+        "tsconfig.json"
+    ],
+    "scripts": {
+        "clean": "shx mkdir -p .parcel-cache dist lib && shx rm -rf .parcel-cache dist lib",
+        "start": "parcel src/index.html",
+        "build": "parcel build src/index.html"
+    },
+    "dependencies": {
+        "@metaplex-foundation/js": "^0.17.10",
+        "@solana/spl-token": "^0.3.6",
+        "@solana/wallet-adapter-base": "^0.9.18",
+        "@solana/wallet-adapter-react": "^0.15.22",
+        "@solana/wallet-adapter-react-ui": "^0.9.20",
+        "@solana/wallet-adapter-wallets": "^0.19.5",
+        "@solana/web3.js": "^1.58.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "browserify-zlib": "^0.2.0",
+        "buffer": "^5.7.1",
+        "file-loader": "^6.2.0",
+        "parcel": "^2.3.2",
+        "path-browserify": "^1.0.1",
+        "prettier": "^2.7.1",
+        "process": "^0.11.10",
+        "shx": "^0.3.4",
+        "typescript": "~4.7.4"
+    }
+}
