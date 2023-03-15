@@ -7,6 +7,7 @@ import type { FC, ReactNode } from 'react';
 import React, { useMemo } from 'react';
 
 import greeksGif from '../public/cool-cats.gif';
+import phase2Header from '../public/phase-2-wl-token-header.png';
 import MintButton from './MintButton';
 
 export const App: FC = () => {
@@ -52,10 +53,10 @@ const Content: FC = () => {
         </nav>
         <section className='mint'>
             <div className='card'>
+                <img className='header' src={phase2Header} alt="Phase 2 Whitelist Token Mint" />
                 <div className='img-container'>
                     <img className='greeks' src={greeksGif} alt="NFTs to Mint" />
                 </div>
-                <h1>MINT WHITELIST TOKEN</h1>
                 <MintButton />
             </div>
         </section>

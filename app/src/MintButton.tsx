@@ -4,6 +4,7 @@ import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
 import { Keypair, ParsedAccountData, PublicKey, sendAndConfirmTransaction, SystemProgram, Transaction } from '@solana/web3.js';
 import { createAssociatedTokenAccountInstruction, createMintToInstruction, createTransferInstruction, getAssociatedTokenAddress, getOrCreateAssociatedTokenAccount, TOKEN_PROGRAM_ID } from '@solana/spl-token';
+import { MICKEYS_ARRAY } from '../public/mickeys'
 
 const MINT_ADDRESS_FAKE_GREEKS = 'Bgskavu2mHHyKjzGHvXz12bxKWmsR9PSRGEaA7Tz6b8H';
 const MINT_ADDRESS_WHITELIST = '7i1U974Ln84S4uBGTfWJD9EKf11AxWAWtuj9pNn34NKv';
@@ -14,6 +15,7 @@ function MintButton() {
   // Declare booleans to check if user can mint
   let hasGreekNFT = false;
   let hasGreekTokens = false;
+  let isMickey = false;
 
   const { connection } = useConnection();
   const { wallet, sendTransaction } = useWallet();
@@ -51,6 +53,12 @@ function MintButton() {
   
       if (nft.collection.address.toBase58() === 'DDMrUempSmfDuzSK2YDQKpKHoGF9Sr8ch2bFj9nhvCkq') {
         console.log('You have a fake greek NFT!')
+        for (const mickey of MICKEYS_ARRAY) {
+          if (nft.json?.name?.includes(mickey)) {
+            isMickey = true
+            console.log('This NFT is a Mickey! ', isMickey)
+          }
+        }
         return true
       }
       else {
@@ -242,7 +250,7 @@ function MintButton() {
   }, [wallet, sendTransaction, connection])
 
   return (
-    <button onClick={mintWhitelist} className='mintBtn'>MINT</button>
+    <button onClick={mintWhitelist} className='mintBtn'>CLAIM WL TOKEN</button>
   )
 }
 
