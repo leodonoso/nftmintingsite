@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# TheGreeks NFT Minting Website
+
+Originally started as an NFT minting website for @ItsTheGreeks on Twitter that I was developing alongside some peers, they never payed me, so I never finished it.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
