@@ -1,6 +1,6 @@
 # TheGreeks NFT Minting Website
 
-Originally started as an NFT minting website for @ItsTheGreeks on Twitter that I was developing alongside some peers, they never payed me, so I never finished it.
+Originally started as an NFT minting website for @ItsTheGreeks on Twitter that I was developing alongside some peers, they never payed me, so I never finished it at the time. Later on I decided I would finish it mostly just to learn more about Solana.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
